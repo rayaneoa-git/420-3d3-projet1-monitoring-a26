@@ -57,7 +57,7 @@ class App:
         if cpu < 50:
             couleur_cpu = "green"
         elif cpu < 80:
-            couleur_cpu = "orange"
+          couleur_cpu = "orange"
         else:
             couleur_cpu = "red"
 
@@ -65,6 +65,7 @@ class App:
             self.label_80_cpu.config(text="Avertissement 80 %!", fg="red")
         else:
             self.label_80_cpu.config(text="", fg="black")
+
         self.canvas_cpu.create_rectangle(0, 0, largeur_cpu, 20, fill=couleur_cpu, outline="")
 
         self.label_cpu_grand.config(text=f"{cpu:.1f}%")
