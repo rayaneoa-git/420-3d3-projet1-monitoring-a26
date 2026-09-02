@@ -41,6 +41,19 @@ class App:
         self.canvas_disque = tk.Canvas(self.frame_disque, width=300, height=20, bg="white")
         self.canvas_disque.pack()
 
+        self.boutton_log = tk.Button(self.fenetre, text="desactiver les logs", command=self.toggle_logs)
+        self.boutton_log.pack(pady=10)
+        self.logs_enabled = True
+
+    def toggle_logs(self):
+        self.logs_enabled = not self.logs_enabled
+        if self.logs_enabled:
+            self.boutton_log.config(text='desactiver les logs')
+        else:
+            self.boutton_log.config(text='activer les logs')    
+
+      
+
         self.rafraichir()
         self.fenetre.mainloop()
 
@@ -101,8 +114,9 @@ class App:
             f"RAM: {ram:.1f}% | "
             f"Disque: {disque:.1f}%\n"
         )
-        with open("monitoring.log", 'a') as f:
-            f.write(ligne)
+        if self.logs_enabled:
+            with open("monitoring.log", 'a') as f:
+                f.write(ligne)
 
         self.fenetre.after(2000, self.rafraichir)
 
