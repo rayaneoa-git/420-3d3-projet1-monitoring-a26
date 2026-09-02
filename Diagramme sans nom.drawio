@@ -1,0 +1,46 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Page-1" id="V7IrVuT7UfKpLtbRG6UQ">
+    <mxGraphModel dx="1414" dy="777" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="VRF2K9Bxxz6nOGGBEIZv-1" parent="1" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=40;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;abs&lt;br&gt;Subject&lt;/span&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="120" width="140" as="geometry" />
+        </mxCell>
+        <mxCell id="VRF2K9Bxxz6nOGGBEIZv-2" parent="VRF2K9Bxxz6nOGGBEIZv-1" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="&lt;div&gt;# _obs : list&lt;/div&gt;" vertex="1">
+          <mxGeometry height="26" width="140" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="VRF2K9Bxxz6nOGGBEIZv-3" parent="VRF2K9Bxxz6nOGGBEIZv-1" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+ abonner(obs)&lt;br&gt;+ desabonner(obs)&lt;br&gt;+ notifier()" vertex="1">
+          <mxGeometry height="54" width="140" y="66" as="geometry" />
+        </mxCell>
+        <mxCell id="VRF2K9Bxxz6nOGGBEIZv-5" parent="1" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="metrique systeme" vertex="1">
+          <mxGeometry height="156" width="170" y="190" as="geometry" />
+        </mxCell>
+        <mxCell id="VRF2K9Bxxz6nOGGBEIZv-6" parent="VRF2K9Bxxz6nOGGBEIZv-5" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="-__ cpu&lt;div&gt;-__ ram&lt;br&gt;- __ stockage&lt;br&gt;float&lt;/div&gt;" vertex="1">
+          <mxGeometry height="78" width="170" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="VRF2K9Bxxz6nOGGBEIZv-7" parent="VRF2K9Bxxz6nOGGBEIZv-5" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+ acctualliser_metriques ()" vertex="1">
+          <mxGeometry height="26" width="170" y="104" as="geometry" />
+        </mxCell>
+        <mxCell id="VRF2K9Bxxz6nOGGBEIZv-8" parent="VRF2K9Bxxz6nOGGBEIZv-5" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+get_données() : dict" vertex="1">
+          <mxGeometry height="26" width="170" y="130" as="geometry" />
+        </mxCell>
+        <mxCell id="VRF2K9Bxxz6nOGGBEIZv-9" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;align=left;" value="&lt;font face=&quot;Lucida Console&quot;&gt;class metrique systemes:&lt;br&gt;#&lt;/font&gt;&lt;div&gt;&lt;font face=&quot;Lucida Console&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;def acctualliser_metriques():&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font face=&quot;Lucida Console&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;self.__cpu = psutil.cpu()&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;self.ram = psutil.ram()&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;self.stockage = psutil.stockage()&lt;br&gt;&lt;/font&gt;&lt;div&gt;&lt;font face=&quot;Lucida Console&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;def get_donnees(self):&lt;br&gt;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font face=&quot;Lucida Console&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;donnees = {&quot;cpu&quot; : self.__cpu, &quot;ram&quot; : self.__ram, &quot;stockage&quot; : self.__stockage&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;return donnees&lt;/font&gt;&lt;/div&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="270" width="480" x="347" as="geometry" />
+        </mxCell>
+        <mxCell id="VRF2K9Bxxz6nOGGBEIZv-15" parent="1" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="abs&lt;br&gt;obs" vertex="1">
+          <mxGeometry height="104" width="140" x="170" y="66" as="geometry" />
+        </mxCell>
+        <mxCell id="VRF2K9Bxxz6nOGGBEIZv-16" parent="VRF2K9Bxxz6nOGGBEIZv-15" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+ field: type" vertex="1">
+          <mxGeometry height="26" width="140" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="VRF2K9Bxxz6nOGGBEIZv-17" parent="VRF2K9Bxxz6nOGGBEIZv-15" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+ field: type" vertex="1">
+          <mxGeometry height="26" width="140" y="52" as="geometry" />
+        </mxCell>
+        <mxCell id="VRF2K9Bxxz6nOGGBEIZv-18" parent="VRF2K9Bxxz6nOGGBEIZv-15" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+ field: type" vertex="1">
+          <mxGeometry height="26" width="140" y="78" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
